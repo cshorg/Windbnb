@@ -3,7 +3,10 @@ interface ContentHeaderProps {
   stays: string
 }
 
-const ContentHeader: React.FC<ContentHeaderProps> = ({ location, stays }) => {
+export const ContentHeader: React.FC<ContentHeaderProps> = ({
+  location,
+  stays
+}) => {
   return (
     <div className="flex items-center justify-between">
       <div className="font-bold text-[24px] text-[#4F4F4F]">

@@ -1,5 +1,3 @@
-import { useEffect } from "react"
-
 interface StayCardProps {
   stay: {
     city: string
@@ -15,10 +13,6 @@ interface StayCardProps {
 }
 
 const StayCard: React.FC<StayCardProps> = ({ stay }) => {
-  useEffect(() => {
-    console.log(stay)
-  }, [])
-
   return (
     <div className="sm:w-[395px] w-[350px]">
       <img
