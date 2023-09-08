@@ -27,9 +27,10 @@ const MainContent = () => {
   }, [])
 
   return (
-    <div className="font-custom sm:px-[94px] px-[12px] max-w-[1440px] mt-[40px] mb-[40px]">
+    <div className="font-custom sm:px-[94px] px-[12px] lg:max-w-[100%] max-w-[1440px] mt-[40px] mb-[40px]">
       <ContentHeader location={"Finland"} stays={"16"} />
-      <div className="mt-[32px] grid sm:grid-cols-3 grid-cols-1 gap-[34px]">
+      <div className="mt-[32px] grid sm:grid-cols-3 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 grid-cols-1 2xl:gap-[100px] gap-[34px]">
+        {error && <div>{error}</div>}
         {data &&
           data.map((stay, index) => <StayCard key={index} stay={stay} />)}
       </div>
